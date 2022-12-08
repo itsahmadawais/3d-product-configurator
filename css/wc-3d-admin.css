@@ -1,0 +1,9 @@
+.cmb-type-group .cmb2-wrap>.cmb-field-list>.cmb-row, .cmb2-postbox .cmb2-wrap>.cmb-field-list>.cmb-row {
+    padding: 0.8em 0!important;
+    margin: 0;
+}
+
+.cmb-subsection .cmb-th { display: none; }
+.cmb-subsection .cmb-td { width: 100%!important; float: none!important; }
+.rc_wc_custom_fields .rc_wc_first_row .regular-text { max-width: 230px; }
+.rc_wc_custom_fields .cmb_table_field td { vertical-align: top; }

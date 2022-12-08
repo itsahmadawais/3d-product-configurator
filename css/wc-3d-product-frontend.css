@@ -1,0 +1,58 @@
+/* WC-3d-Product-Frontend CSS */
+/* Global */
+.wc_3d_product_canvas { cursor: move; position: relative; min-height: 450px; }
+@media (min-width: 768px) {
+	.single-product div.product .woocommerce-product-gallery, .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
+    	width: 46%;
+    }
+    .single-product div.product .summary {
+    	width: 48%;
+	}
+}
+
+/* Player CSS */
+.wc_3d_player { text-align: left; position: absolute; color: #fff; height: 30px; width: 100%; bottom: 15px; left: 0; z-index: 1; font-family: Arial, Helvetica, sans-serif; padding: 5px; }
+.wc_3d_player .fa { margin: 0 5px; cursor: pointer; width: 30px; height: 30px; text-align: center; padding: 7px 0; background: #000; border-radius: 50%; }
+.wc_3d_player .fa:hover, .wc_3d_player .fa:focus { background: #3a3a3a; color: #2196F3; }
+
+
+/* Full Screen CSS */
+.wc-3d-product-wrapper.fullscreenmode { position: fixed; top: 0; left: 0; z-index: 9999; background:#fff; }
+.wc_3d_materials.fullscreenmode { position: fixed; bottom: 15px; right: 15px; z-index: 10000; }
+
+/*Progress Bar*/
+.loaderhtml { position:absolute; width:100%; height: 100%; background: #3a3a3a; -webkit-transition: visibility 2s; transition: visibility 2s; visibility: visible; z-index: 2;  }
+.progressbar { position:absolute; width:80%; height: 6px; background: #f1f1f1; top: 50%; margin-top: -3px; left: 10%; }
+.progress { width: 5px; height: 6px; background: #2196F3; -webkit-transition: width 2s; transition: width 2s; border: none; border-radius: 0; }
+
+/*Mat Options*/
+.wc_config_title { padding: 5px 10px; font-size: 18px; background: #000; color: #fff; font-weight: normal; }
+.material_options { padding: 0 10px; }
+.material_group { margin-bottom: 15px; }
+.obj_option, .pattern_option, .mat_option, .img_option, .gradient_option, .font_color { width: 50px; height: 50px; display: inline-block; cursor: pointer; position: relative; overflow: hidden; transition: all 0.4s; }
+.obj_option:hover, .obj_option:focus, .obj_option.active, .pattern_option:hover, .pattern_option:focus, .pattern_option.active, .font_color:hover, .font_color:focus, .font_color.active, .gradient_option:hover, .gradient_option:focus, .gradient_option.active, .mat_option:hover, .mat_option:focus, .mat_option.active, .img_option:hover, .img_option:focus, .img_option.active { border: 2px solid blue; border-radius: 50%; }
+.obj_option.active:before, .pattern_option.active:before, .font_color.active:before, .gradient_option.active:before, .mat_option.active:before, .img_option.active:before { content: '\2713'; text-align: center; position: absolute; width: 100%; height: 100%; color: #fff; background: rgba(0, 0, 0, 0.3); padding: 0.2em; }
+.option_price { float: right; color: #FFF; margin-right: 15px; }
+
+.ui-accordion-header-icon.ui-icon { float: right; margin-top: 10px; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; }
+.ui-icon-triangle-1-e { border-top: 10px solid #fff; }
+.ui-icon-triangle-1-s { border-bottom: 10px solid #fff; }
+
+/* Text Options */
+.field_text { width: 100%; }
+.text_options_block { padding-top: 10px; padding-bottom: 10px; }
+.text_options_block select { width: 100%; display: inline-block; padding: 5px; font-size: 14px; }
+ /*{ width: 47%; display: inline-block; height: 32px; vertical-align: middle; margin-left: 3%; }*/
+.text_options_heading { margin-top: 15px; }
+.fontFamily { display: inline-block; padding: 10px; font-size: 14px; cursor: pointer; border: 1px solid #000; vertical-align: middle; }
+
+/* User Upload */
+.dropzone { min-height: 50px; padding: 10px 10px; }
+.dropzone .dz-message { margin: 1em 0; }
+.dz-details { display: none; }
+.dropzone .dz-preview { margin: 0px; min-height: 50px; }
+.dropzone .dz-preview:hover .dz-image img { -webkit-filter: none; filter: none; }
+.dropzone .dz-preview .dz-image { width: 50px; height: 50px; border-radius: 0; }
+.dropzone .dz-preview .dz-image:hover, .dropzone .dz-preview .dz-image:focus, .dropzone .dz-preview.active .dz-image { border: 2px solid blue; border-radius: 50%; }
+.dropzone .dz-preview.active .dz-image:before { content: '\2713'; text-align: center; position: absolute; width: 100%; height: 100%; color: #fff; background: rgba(0, 0, 0, 0.3); padding: 0.2em; }
+.dropzone .dz-preview .dz-remove { width: 50px; height: 14px; font-size: 12px; overflow: hidden; }

@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+Common Classess
+*/
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.qr-hr {
+  width: 100%;
+  height: 1px;
+  background-color: #dddcdc;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/**
+* Buttons
+**/
+.btn-primary {
+  background-color: #d4b15f;
+  color: #fff;
+}
+
+.qr-designer-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9999;
+}
+
+.modal {
+  width: 960px;
+  background-color: #fff;
+  margin: 2rem auto;
+  margin-top: 5%;
+  height: 80%;
+}
+
+.modal .times .btn-times {
+  border: 0;
+  outline: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  background-color: #f84c4c;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal .modal-header {
+  padding: 0.5rem;
+  border: 1px solid #dddcdc;
+}
+
+.modal .modal-header .heading h2 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.modal .modal-body {
+  border-bottom: 1px solid #dddcdc;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.modal .modal-body .fabric-gallery-item {
+  padding: 0;
+}
+
+.modal .modal-body .tabs {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.modal .modal-body .tabs .ul-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal .modal-body .tabs .ul-tabs li {
+  display: inline-block;
+  background-color: #dddcdc;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.modal .modal-body .tabs .ul-tabs li.active {
+  background-color: #d4b15f;
+  color: #fff;
+}
+
+.modal .modal-body .colors-filter .colors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal .modal-body .colors-filter .colors li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.modal .modal-body .colors-filter .colors li img,
+.modal .modal-body .colors-filter .colors li .color {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-right: 1rem;
+  border-radius: 45%;
+}
+
+.modal .modal-body .form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-body .form-inputs .input-control {
+  margin-right: 0.2rem;
+}
+
+.modal .modal-body .form-inputs .input-control .form-control {
+  background-color: #dddcdc;
+  border: 0;
+  padding: 0.2rem 1rem;
+}
+
+.modal .modal-body .form-inputs .input-control .search-btn {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown {
+  background-color: #dddcdc;
+  padding: 0 1rem;
+  width: 100px;
+  position: relative;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown .flex-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown .color {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-right: 1rem;
+  border-radius: 45%;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown dd {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin: 0 !important;
+  color: #808285;
+  z-index: 999;
+  background-color: #dddcdc;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown dd ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.modal .modal-body .form-inputs .input-control .dropdown dd ul li {
+  margin: 0.2rem;
+  color: #808285;
+  background-color: #cecece;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.modal .modal-body .fabrics {
+  padding: 0.6rem 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .modal-body .fabrics .fabric {
+  position: relative;
+  cursor: pointer;
+  width: 135px;
+  height: 100%;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  margin: 0.2rem 0.5rem;
+}
+
+.modal .modal-body .fabrics .fabric:hover .overlay {
+  display: block;
+}
+
+.modal .modal-body .fabrics .fabric .fabric-img {
+  width: 100%;
+  height: 100px;
+}
+
+.modal .modal-body .fabrics .fabric .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.4rem 0.6rem;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.modal .modal-body .fabrics .fabric .overlay .heading {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.modal .modal-body .fabrics .fabric .overlay .subheading {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.modal .modal-body .fabrics .fabric .overlay .add-to-fav {
+  text-align: right;
+}
+
+.modal .modal-body .fabrics .fabric .overlay .add-to-fav .btn.fav-btn {
+  border-radius: 50%;
+  background-color: #dddcdc;
+  color: #000;
+  border: 0;
+  outline: 0;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal .modal-body .fabrics .fabric .overlay .add-to-fav .btn.active {
+  background-color: red;
+  color: #fff;
+}
+
+.modal .modal-footer {
+  padding: 0.6rem 1rem;
+}
+
+.modal .modal-footer .nav .btn {
+  outline: 0;
+  border: 0;
+  padding: 0.4rem 1.5rem;
+  cursor: pointer;
+}
+
+.modal .modal-footer .pagination .ul-pagination {
+  list-style: none;
+}
+
+.modal .modal-footer .pagination .ul-pagination li {
+  display: inline-block;
+}
+
+.modal .modal-footer .pagination .ul-pagination li a {
+  text-decoration: none;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #dddcdc;
+  color: #000;
+}
+
+.modal .modal-footer .pagination .ul-pagination li.active a {
+  background-color: #d4b15f;
+  color: #fff;
+}
+
+.btn-next,
+.btn-prev {
+  background-color: #d4b15f;
+  color: #fff;
+  padding: 1rem;
+}
+
+.bg-aqua {
+  background-color: aqua;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-grey {
+  background-color: grey;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-valvet {
+  background-color: #a00909;
+}
+
+.navigation {
+  padding: 1rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid #c5c5c5;
+}
+
+.navigation .flex-container .btn {
+  width: 50%;
+  padding: 0.9rem;
+  border: 1px solid #b1b1b1;
+  cursor: pointer;
+}
+
+.navigation .flex-container .btn:nth-child(2) {
+  margin-left: 1rem;
+}
+
+.navigation .flex-container .add-to-car-btn {
+  display: none;
+  margin-left: 1rem;
+}
+
+.navigation .flex-container.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dots-bars-7 {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 0, var(--c) 100% 100%;
+  background-size: 8px 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: db7-0 1s infinite;
+          animation: db7-0 1s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.dots-bars-7:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  top: calc(50% - 4px);
+  left: -8px;
+  -webkit-animation: inherit;
+          animation: inherit;
+  -webkit-animation-name: db7-1;
+          animation-name: db7-1;
+}
+
+@-webkit-keyframes db7-0 {
+  16.67% {
+    background-size: 8px 30%, 8px 30%, 8px 50%, 8px 50%, 8px 50%, 8px 50%;
+  }
+  33.33% {
+    background-size: 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 50%, 8px 50%;
+  }
+  50% {
+    background-size: 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%;
+  }
+  66.67% {
+    background-size: 8px 50%, 8px 50%, 8px 30%, 8px 30%, 8px 30%, 8px 30%;
+  }
+  83.33% {
+    background-size: 8px 50%, 8px 50%, 8px 50%, 8px 50%, 8px 30%, 8px 30%;
+  }
+}
+
+@keyframes db7-0 {
+  16.67% {
+    background-size: 8px 30%, 8px 30%, 8px 50%, 8px 50%, 8px 50%, 8px 50%;
+  }
+  33.33% {
+    background-size: 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 50%, 8px 50%;
+  }
+  50% {
+    background-size: 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%;
+  }
+  66.67% {
+    background-size: 8px 50%, 8px 50%, 8px 30%, 8px 30%, 8px 30%, 8px 30%;
+  }
+  83.33% {
+    background-size: 8px 50%, 8px 50%, 8px 50%, 8px 50%, 8px 30%, 8px 30%;
+  }
+}
+
+@-webkit-keyframes db7-1 {
+  20% {
+    left: 0px;
+  }
+  40% {
+    left: calc(50%  - 4px);
+  }
+  60% {
+    left: calc(100% - 8px);
+  }
+  80%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes db7-1 {
+  20% {
+    left: 0px;
+  }
+  40% {
+    left: calc(50%  - 4px);
+  }
+  60% {
+    left: calc(100% - 8px);
+  }
+  80%,
+  100% {
+    left: 100%;
+  }
+}
+
+#fabric-info-container {
+  padding: 1rem 0;
+}
+
+#fabric-info-container .image-box {
+  width: 70%;
+  margin-right: 2rem;
+  height: 100%;
+}
+
+#fabric-info-container .image-box img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#fabric-info-container .info {
+  width: 70%;
+}
+
+#fabric-info-container .info .content .brand-img {
+  width: 150px;
+}
+
+#fabric-info-container .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#fabric-info-container .info ul li .label-box {
+  width: 150px;
+}
+
+#fabric-info-container .info ul li .label-box .label {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#fabric-info-container .info ul li .value-box {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#fabric-info-container .info ul li .value-box .color-container {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#fabric-info-container .info ul li .value-box .color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  border-radius: 90%;
+}
+
+#fabric-info-container .info ul li .value-box .value {
+  margin-bottom: 0;
+}
+
+.change-fabric {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=style.css.map */

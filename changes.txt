@@ -1,0 +1,143 @@
+-- Nov 1, 2022 - Version 2.6.0.1 -- ✅
+- 👉 Added FiledType:Choices to library\cmb2\plugins\admin\cmb2-conditionals.js, Line 109
+
+
+
+-- Oct 31, 2022 - Version 2.6.0.1 -- ✅
+- 👉 Added: includes\classes\library\cmb2\plugins\class-cmb2-render-choices-field.php.
+
+
+-- Oct 28, 2022 - Version 2.6.0.1 -- ✅
+- 👉 Added: includes\classes\library\cmb2\plugins\class-cmb2-render-choices-field.php.
+- 👉 Added: Function and hook to register custom Radio Field, Line: 46 - 52.
+
+
+-- Oct 14, 2022 - Version 2.6.0.1 --
+- Added: includes\classes\admin\admin-metabox.php, Line: 307 - 311.
+
+
+
+-- Jun 28, 2022 - Version 2.6.0.1 --
+- Fixed issue with cart data not sending for other plugins
+
+-- Sep 18, 2020 - Version 2.6.0 --
+- Added: GLTF / GLB file format support
+- Added: HDR Environment Support
+- Added: Enable / Disable HDR Environment to be use as scene bg or not
+- Added: Option in setting to Allow / block orbit control from move to down side
+- Added: 'rc_3d_file_types' Filter for File types selection in product screen
+- Added: For SVG Material, Default 2 Sided Property added
+- Improvement: 3 Point Studio light setup exchanged with Hemisphere light for better performance and quality
+- Improvement: Compability with SVG applying to specific material for multiple elements
+- Under The Hood: Classes are separated for Template & Ajax
+- Under The Hood: Restructured Directories for Better Management of Classes and Library
+- Under The Hood: Comments improved in non-minify js file
+
+-- June 17, 2020 - Version 2.5.0 --
+- Improvement: Now save image button will save image with product name
+- Improvement: Removed default Min / Max Zoom value for old version compability
+- Improvement: jQuery active / deactive class for texture / colors selection
+- Improvement: PHP Code Optimisation
+- Fixed: Few Compability issue with Normal / Variable Product
+- Fixed: Object Show/hide had minor issue in template hooks
+- Under The Hood ( Completed ): jQuery is loading async now for better performance and speed delivery of content.
+- Under The Hood ( Completed ): jQuery is updated to ES6 Standards. Also Event triggers added for more data customisation based on events.
+- Under The Hood ( Completed ): jQuery is Converted in PUB / SUB now for better data transfer of more customization. Documentation will soon update for same.
+
+-- April 28, 2020 - Version 2.4 --
+- Fixed: FBX Uploading issue Solved
+- Fixed: Template Overried issue Solved. Will work with any theme now.
+- Improvement: Font Library moved to new tab in WC 3d Options
+- Added: Design Option added for Accordion Heading Bg and Text Color
+- Added: Sample Tshirt & Svg Added into Documentation Folder / Assets / FBX-SVG
+- Removed: jQuery UI CSS removed. Now Accordion Design is Flat & Simple
+- Under The Hood( Completed ): Right Side Accordion, each configuration type template loading through hooks now. So Accordion Template can completely Overried by Function for different design purpose. Documentation will soon update for same.
+
+-- April 22, 2020 - Version 2.3.2 --
+- Bug Fix: Fixed Compability issue with SVG applying to specific material and normal material
+
+-- April 19, 2020 - Version 2.3.1 --
+- Tested upto WC 4.0.1 & WP 5.1
+- Added: SVG can now apply to specific material only if wanted
+- Added: Global Shadow On / Off Option Added
+- Added: Min / Max Zoom features added at product level
+- Improvement: Frontend Left panel Mat Image updated to load thumbnail rather then full Image
+- Improvement: Backend Configuration Option Fields UI updated
+- Under The Hood( In Development ): Converting Current Js into Modular Js with PUB/SUB for future extension development
+
+-- Sep 20, 2019 - Version 2.3 --
+- Added: 3D Object Show / Hide Configuration Type
+- Added: Config Type: Material / Color can work with WildCard Configuration Id with * Ex. Color_1* will get all ids from svg which have Color_1 prefix and apply color to it
+- Added: Config Type: Material / Color, Can define default value initially
+- Fixed: Ajax was not fetching data when price is not defined for product
+
+-- Sep 06, 2019 - Version 2.2 --
+- Added: Pattern Options for SVG material
+- Added: Updated Custom SVG added to order details for admin only
+- Added: Backend Option added to use one / two side gradient change
+- Added: Global Option to turn on / off pricing features in WC 3D Option from setting
+- Fixed: Frontend Option Error for non 3d products
+- Improvement: Gradient Options remove 2 color selection. Only one color selection and the group of color repeat 2 times for both side color selection based on option enabled
+- Improvement: Backend Order Product Normal Image loading for non-3d Products
+- Improvement: Js improvement for all event dispatch and event queue
+- Improvement: Doc has updated
+
+-- Aug 22, 2019 - Version 2.1.2 --
+- Added: Updated Product Image added to Cart and Order Product Image
+- Dev Added: Filter for frontend Text color option ( only for config type Text): wc_3d_text_color_options
+- Dev Added: Filter for frontend Gradient color option ( only for config type gradient): wc_3d_gradient_options
+- Fixed: Gradient Missing second value
+- Improvement: Removed extra fields from Configuration type Text, Gradient.
+- Improvement: wc_clean added before passing data to cart for security
+
+-- Aug 16, 2019 - Version 2.1.1 --
+- Dev Added: Filter for material group backend fields: wc_3d_config_id_after
+- Dev Added: Filter for frontend material option ( only for config type Material): wc_3d_materials_options
+- Dev Added: Enabling Debug will load unminified js script for developers to find exact line in case of issue
+- Fixed: Empty font data PHP error
+- Fixed: Queryselector Js error
+- Improvement: Show Texture image for material Texure
+- Improvement: Config type Gradient: Backend and Frontend Features to select individual color rather then gradient group
+
+-- Aug 3, 2019 - Version 2.1 --
+- Official Release with SVG support and Separate Price for each material support
+- Added: 3D option also work with WooCommerce Product Shortcode - Only 1 product on page
+- Added: Material Panel is changed to configuration Panel for more options
+- Added: Text Field Options for SVG material
+- Added: Font color, Size and Family options for front end
+- Added: Image Field Options for SVG material
+- Added: User Upload Image for SVG Image Field
+- Added: Gradient Options for SVG material
+- Improvement: Front-End UI Improvement
+- Improvement: Js improvement for loading data
+- Improvement: Cart Product Details improvement. Only display selected options and only additional Price
+- Improvement: Doc has updated
+
+-- April 26, 2019 - Version 2.0.2 --
+- Added: SVG support for unwrapped material ( Beta Feature )
+- Added: Use of multiple Material Name in single material group with comma
+- Added: Additional Light Shadow Casting option
+- Added: Save button for canvas in player
+- Improvement: UI improvement for Material Option Selection
+- Improvement: Doc has updated
+
+-- Feb 12, 2019 - Version 2.0.1 --
+- Added: Separate Pricing for each Material Option ( Beta Feature )
+- Improvement: Loading Minified Script for security purpose
+- Improvement: Doc has updated
+
+-- Jan 13, 2019 - Version 1.2 --
+- Added: Play / Pause button for auto rotate
+- Improvement: UI improvement for 3D Player
+- Improvement: Add to Cart button Replaced with Select Option Button for Products on Shop Page which have 3D options Activated 
+
+-- Dec 11, 2018 - Version 1.1 --
+- Improvement: Texure Loader Used instead of image utility
+- Improvement: Texture wrapping added with repeat
+- Added: Full Screen Mode Added
+
+-- Oct 3, 2018 - Version 1 --
+- Initial Release
+- FBX, json and collada file format supported
+- In-built 3 point studio light setup
+- Live material color and texure changing on website.

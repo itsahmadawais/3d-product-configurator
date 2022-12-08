@@ -1,0 +1,67 @@
+🔴🟠🟡🟢
+
+🔴 = Important
+🟢 = Done
+🟡 = Less Important
+_____________________________________________________
+
+🟢 Add Fields for the Choices in the admin panel:
+    ✅ Title
+    ✅ Price
+    ✅ Image
+    👉 Repeatable
+_____________________________________________________
+
+🟢 Add Fields for the Fabric library:
+    ✅ Title
+    ✅ Affecting Objects
+_____________________________________________________
+
+🟢 Show the input fields in the frontend:
+    ✅ Choices Field
+    ✅ Fabric Gallery
+
+_____________________________________________________s
+
+🔴 Make the Fabric Gallery Dynamic:
+    ✅ Load the items from the AJAX Call.
+    ✅ Make the filters workable.
+    ✅ Make the Fabric Details Previews.
+    ✅ Make the fabric resuable.
+    ✅ AJAX call will return the following pattern:
+    [
+        {
+            title: 'Title',
+            image: 'image URL',
+            price: 'price',
+            pattern: {
+                id: 'Taxonomy ID',
+                title: 'Title'
+            },
+            color: {
+                id: 'Taxonomy ID',
+                title: 'Title',
+                color: 'Color Code'
+            },
+            brand: {
+                id: 'Taxonomy ID',
+                title: 'Title',
+                image: 'image URL'
+            }
+        }
+    ]
+
+_____________________________________________________
+
+📅 18 November, 2022
+
+🔴 Add Brand Image Field for the Fabric Library.
+
+🔴 Add the maginifying glass effect on the fabric image.
+
+🔴 Make the filters work.
+
+🔴 Check the excel sheet for more detials.
+
+🔴 Change the Design as required.
+
